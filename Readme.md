@@ -1,4 +1,4 @@
-## JS Github
+# JS Github
 
 1. Basics of JavaScript
  

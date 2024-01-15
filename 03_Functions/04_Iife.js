@@ -4,10 +4,11 @@
 function someFnction(){ console.log("this is fun");}
 someFnction();
 
-// IIFE 
+// IIFE : Named IIFE
+
 (function someFnction(){ console.log("This is IIFEFunction");})();
 
 
-// IIFE with Arrow function
+// IIFE with Arrow function : Unamed IIFE
 (()=>(console.log("This is IIFE arrow function")))();
 

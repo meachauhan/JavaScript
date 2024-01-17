@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Operation using JS</title>
+</head>
+<body style="background-color: #212121; color: #ffff;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thrusday</div>
+    </div>
+
+    <script>
+        const parent=document.querySelector('.parent')
+        // console.log(parent);
+        // console.log(parent.children); //Gives HTML collection
+
+        for (let i = 0; i < parent.children.length; i++) {
+        //  console.log(parent.children[i].innerHTML)
+            
+        }
+        // console.log(parent.firstElementChild)
+        // console.log(parent.lastElementChild)
+
+
+        const day1=document.querySelector('.day')
+        // console.log(day1);
+        // console.log(day1.parentNode);
+        // console.log(day1.nextSibling);
+
+        const nodes=document.querySelector('.parent').childNodes
+        // console.log("Nodes: ", nodes); //Gives 9 element in NodeList --> count enter as an extra child
+
+        const divElement=document.createElement('div')
+        
+        divElement.className="main"
+        divElement.id=Math.round(Math.random()*10+1)
+        divElement.setAttribute('title','newAttribute')
+        divElement.style.color= "red"
+        divElement.style.padding="12px"
+
+        console.log(divElement);
+
+        // divElement.innerHTML="Some text"
+        
+        const addText=document.createTextNode("Some new Text")
+        divElement.appendChild(addText)
+
+        document.body.appendChild(divElement) //will add at the last of the body DOM tree
+        
+
+
+    </script>
+</body>
+
+</html>

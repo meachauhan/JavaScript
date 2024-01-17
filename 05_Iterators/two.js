@@ -55,3 +55,8 @@ const myCoding=[
 myCoding.forEach((item)=>{
     console.log(item.fileExtenstion , item.langName);
 })
+//ForEach loop doesn't return any values.
+const returnValue =myCoding.forEach((item)=>{
+    return item
+})
+console.log(returnValue); // it will return undefined.

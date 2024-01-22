@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Concepts</title>
+</head>
+<body>
+    <h1>Akash chauhan</h1>
+
+    
+    <button type="button" id="#stop">Submit</button>
+    <script>
+
+        const sayName=()=>{
+           console.log("Akash Chauhan");
+       
+        }
+        const changeH1=()=>{
+           document.querySelector('h1').innerHTML="Changed the text after 2 sec"
+        }
+        //will run sayName funtion after 2 sec.
+    //    setTimeout(sayName,2000);
+
+        document.querySelector('#stop').addEventListener('click',changeH1())
+        
+        
+    </script>
+
+</body>
+    
+
+</html>

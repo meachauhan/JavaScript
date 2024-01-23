@@ -9,21 +9,26 @@
     <h1>Akash chauhan</h1>
 
     
-    <button type="button" id="#stop">Submit</button>
+    <button type="button" id="stop">Submit</button>
     <script>
+    
+    const sayName=()=>{
+        console.log("Akash chauhan");
+    }
+    const changeH1=()=>{
+        document.querySelector('h1').innerHTML="This tag is changed after 2 second "
+    }
+    setTimeout(sayName,2000);
+    const changeMe=setTimeout(changeH1,2000)
 
-        const sayName=()=>{
-           console.log("Akash Chauhan");
-       
-        }
-        const changeH1=()=>{
-           document.querySelector('h1').innerHTML="Changed the text after 2 sec"
-        }
-        //will run sayName funtion after 2 sec.
-    //    setTimeout(sayName,2000);
+    //If clicked will stop the ChangeMe setTimeout fn.
+    function stopChange() {
+        clearTimeout(changeMe)
+        console.log("STOPPED");
+    }
+    document.querySelector('#stop').addEventListener('click',stopChange)
+    
 
-        document.querySelector('#stop').addEventListener('click',changeH1())
-        
         
     </script>
 
